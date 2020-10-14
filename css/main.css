@@ -83,8 +83,7 @@ nav {
 
 .modalRight .img {
     width: 25vw;
-    height: 35vh;
-    margin-bottom: 20px;
+    height: 40vh;
     border-radius: 5%;
     display: inline-block;
 }
@@ -109,15 +108,18 @@ nav {
 }
 
 .projectSet {
+    margin-top: 10%;
     display: none;
 }
 
 .skillSet {
     display: none;
+    font-size: 1.3em;
 }
 
 .contact {
     display: none;
+    font-size: 1em;
 }
 
 .about {

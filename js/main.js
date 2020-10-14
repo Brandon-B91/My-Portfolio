@@ -153,7 +153,7 @@ class TypeWriter {
         this.words = words;
         this.txt = '';
         this.wordIndex = 0;
-        this.wait = parseInt(wait, 10);
+        this.wait = parseInt(wait, 7);
         this.type();
         this.isDeleting = false;
     }
