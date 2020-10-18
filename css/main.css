@@ -21,7 +21,7 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.6);
     display: flex;
@@ -86,6 +86,7 @@ nav {
     height: 40vh;
     border-radius: 5%;
     display: inline-block;
+    border: 1px solid black;
 }
 
 .img:hover {
@@ -315,7 +316,6 @@ h3 {
     }
     .skillsIcon {
         font-size: 1.5em;
-        margin-right: 20px;
     }
     .mobile-contact {
         display: flex;
@@ -355,11 +355,13 @@ h3 {
     .projects-modal {
         display: none;
         overflow: scroll;
+        width: 100%;
     }
     .nav-img {
-        width: 40vw;
-        height: 35vh;
+        width: 45vw;
+        height: 40vh;
         border-radius: 5%;
+        border: 1px solid black;
     }
     .skills-modal {
         font-size: 2em;
@@ -371,7 +373,6 @@ h3 {
     }
     .skills-modal li {
         margin: 50px 0;
-        padding: 5px;
     }
     .contact-modal {
         display: none;
@@ -384,7 +385,12 @@ h3 {
         padding: 10px 20px;
     }
     .contact-modal .icon {
-        font-size: 2.5em;
+        font-size: 2em;
+        margin: 0;
+    }
+    .contact-modal li {
+        margin-top: 50px;
+        padding: 0;
     }
     .about-modal {
         display: none;

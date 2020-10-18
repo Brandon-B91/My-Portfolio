@@ -34,56 +34,33 @@ function showContent() {
 
             if (event.target.classList.contains('projects') === true) {
                 projects.style.display = 'block';
-                if (skills.style.display === 'block') {
-                    skills.style.display = 'none';
-                }
-                if (contact.style.display === 'block') {
-                    contact.style.display = 'none';
-                }
-                if (about.style.display === 'block') {
-                    about.style.display = 'none';
-                }
+                skills.style.display = 'none';
+                contact.style.display = 'none';
+                about.style.display = 'none';
             };
             if (event.target.classList.contains('skills') === true) {
                 skills.style.display = 'block';
-                if (projects.style.display === 'block') {
-                    projects.style.display = 'none';
-                }
-                if (contact.style.display === 'block') {
-                    contact.style.display = 'none';
-                }
-                if (about.style.display === 'block') {
-                    about.style.display = 'none';
-                }
+                projects.style.display = 'none';
+                contact.style.display = 'none';
+                about.style.display = 'none';
             };
             if (event.target.classList.contains('contact-me') === true) {
                 contact.style.display = "block";
-                if (projects.style.display === 'block') {
-                    projects.style.display = 'none';
-                }
-                if (skills.style.display === 'block') {
-                    skills.style.display = 'none';
-                }
-                if (about.style.display === 'block') {
-                    about.style.display = 'none';
-                }
+                projects.style.display = 'none';
+                skills.style.display = 'none';
+                about.style.display = 'none';
             };
             if (event.target.classList.contains('about-me') === true) {
                 about.style.display = 'block';
-                if (projects.style.display === 'block') {
-                    projects.style.display = 'none';
-                }
-                if (skills.style.display === 'block') {
-                    skills.style.display = 'none';
-                }
-                if (contact.style.display === 'block') {
-                    contact.style.display = 'none';
-                }
+                projects.style.display = 'none';
+                skills.style.display = 'none';
+                contact.style.display = 'none';
             };
         });
     })
 };
 showContent();
+
 
 function closeNav() {
     let close = document.querySelector('.close');
