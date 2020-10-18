@@ -354,12 +354,11 @@ h3 {
     }
     .projects-modal {
         display: none;
-        overflow: scroll;
         width: 100%;
     }
     .nav-img {
         width: 45vw;
-        height: 40vh;
+        height: 35vh;
         border-radius: 5%;
         border: 1px solid black;
     }
