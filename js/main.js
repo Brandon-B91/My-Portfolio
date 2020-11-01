@@ -16,8 +16,10 @@ function modal() {
         menu.style.display = 'block';
         let modalBottom = document.querySelector('.modalBottom');
         modalBottom.classList.remove('move-up');
-        let content = document.querySelector('.content');
-        content.style.display = 'none';
+        let projects = document.querySelector('.projectSet').style.display = 'none';
+        let skills = document.querySelector('.skillSet').style.display = 'none';;
+        let contact = document.querySelector('.contact').style.display = 'none';;
+        let about = document.querySelector('.about').style.display = 'none';;
     })
 };
 modal();
@@ -25,8 +27,6 @@ modal();
 function showContent() {
     document.querySelectorAll('.display').forEach(item => {
         item.addEventListener('click', (event) => {
-            // let content = document.querySelector('.content');
-            // content.style.display = 'block';
             let projects = document.querySelector('.projectSet');
             let skills = document.querySelector('.skillSet');
             let contact = document.querySelector('.contact');
