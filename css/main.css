@@ -20,14 +20,13 @@
        width: 100%;
        background: url("../img/bg.jpg")center center/cover no-repeat;
        background-color: rgba(0, 0, 0, 0.7);
+       background-blend-mode: multiply;
        display: flex;
        flex-direction: column;
        justify-content: center;
        overflow: none;
-       /* filter: grayscale(70%); */
    }
-   
-   .wrapper::After {
+   /* .wrapper::After {
        content: "";
        position: absolute;
        top: 0;
@@ -35,7 +34,7 @@
        height: 100%;
        width: 100%;
        background: rgba(0, 0, 0, 0.7);
-   }
+   } */
    
    .wrapper>* {
        z-index: 2;
