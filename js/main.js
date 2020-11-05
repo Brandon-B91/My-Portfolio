@@ -138,6 +138,20 @@ function clearContact() {
 }
 clearContact();
 
+function clearContactSm() {
+    let clearName = document.querySelector('.close-name-sm');
+    clearName.addEventListener('click', () => {
+        let innerName = document.querySelector('.name-sm');
+        innerName.value = '';
+    })
+    let closeEmail = document.querySelector('.close-email-sm');
+    closeEmail.addEventListener('click', () => {
+        let innerEmail = document.querySelector('.email-sm')
+        innerEmail.value = '';
+    });
+}
+clearContactSm();
+
 // ES6 Class
 class TypeWriter {
     constructor(txtElement, words, wait = 3000) {
