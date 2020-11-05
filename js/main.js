@@ -123,6 +123,21 @@ function openAbout() {
 };
 openAbout();
 
+function clearContact() {
+    let closeName = document.querySelector('.close-name');
+    closeName.addEventListener('click', () => {
+        let innerName = document.querySelector('.name');
+        innerName.value = '';
+    });
+
+    let closeEmail = document.querySelector('.close-email');
+    closeEmail.addEventListener('click', () => {
+        let innerEmail = document.querySelector('.email')
+        innerEmail.value = '';
+    });
+}
+clearContact();
+
 // ES6 Class
 class TypeWriter {
     constructor(txtElement, words, wait = 3000) {

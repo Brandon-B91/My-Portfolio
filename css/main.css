@@ -62,9 +62,6 @@
        height: 100%;
        z-index: 99;
    }
-   /* .content {
-        height: 100%;
-    } */
    
    .fa-times {
        position: absolute;
@@ -172,6 +169,16 @@
        transition: all 0.3s ease;
    }
    
+   .close-name {
+       position: absolute;
+       bottom: 0;
+       right: 0;
+   }
+   
+   .close-name:hover {
+       cursor: pointer;
+   }
+   
    .contact-form input:focus+.label-name .content-name,
    .contact-form input:valid+.label-name .content-name {
        transform: translateY(-150%);
@@ -179,8 +186,8 @@
        color: red;
    }
    
-   form input:focus+.label-name::after,
-   form input:valid+.label-name {
+   .contact-form input:focus+.label-name::after,
+   .contact-form input:valid+.label-name {
        transform: translateX(0%);
    }
    
@@ -231,6 +238,16 @@
        transition: all 0.3s ease;
    }
    
+   .close-email {
+       position: absolute;
+       bottom: 0;
+       right: 0;
+   }
+   
+   .close-email:hover {
+       cursor: pointer;
+   }
+   
    .email-form input:focus+.email-name .email-field,
    .email-form input:valid+.email-name .email-field {
        transform: translateY(-150%);
@@ -239,7 +256,7 @@
    }
    
    .email-form input:focus+.email-name::after,
-   .email-form input:valid+.email-form {
+   .email-form input:valid+.email-name {
        transform: translateX(0%);
    }
    
@@ -249,7 +266,6 @@
        height: 50px;
        position: relative;
        background: none;
-       outline: none;
    }
    
    .text-area textarea {
@@ -257,6 +273,13 @@
        height: 75px;
        resize: none;
        background: none;
+       outline: none;
+   }
+   
+   .close-text {
+       position: absolute;
+       right: 0;
+       top: 0;
    }
    
    form button {
@@ -273,7 +296,7 @@
    }
    
    .contact ul {
-       margin-top: 10%;
+       margin-top: 5%;
    }
    
    .contact li {
@@ -413,6 +436,9 @@
    }
    
    @media screen and (max-width: 600px) {
+       body {
+           height: 100%;
+       }
        .wrapper {
            background-size: 100% 100%;
        }
