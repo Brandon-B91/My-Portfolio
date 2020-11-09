@@ -12,6 +12,10 @@
        text-decoration: none;
        color: black;
    }
+   
+   ul {
+       list-style-type: none;
+   }
    /* main */
    
    .wrapper {
@@ -581,6 +585,7 @@
            font-size: 2em;
            display: none;
            text-align: left;
+           overflow: hidden;
        }
        .skills-modal ul {
            list-style-type: none;
@@ -589,6 +594,7 @@
            margin: 50px 0;
        }
        .contact-modal {
+           overflow: hidden;
            display: none;
        }
        .contact-modal h1 {
@@ -616,6 +622,7 @@
            background: none;
        }
        .about-modal {
+           overflow: hidden;
            display: none;
        }
        .about-modal p {
@@ -623,7 +630,8 @@
        }
        .about-modal li {
            padding: 0;
-           margin: 20px 0;
+           width: 90%;
+           margin: 25px auto;
        }
        .move-down {
            transform: translateY(100vh);
