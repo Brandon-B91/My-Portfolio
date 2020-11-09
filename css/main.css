@@ -573,9 +573,10 @@
            transition: ease-in 0.3s;
        }
        .projects-modal {
-           padding: 20% 0 0 0;
+           padding: 10% 0 0 0;
            display: none;
            width: 100%;
+           height: auto;
            overflow: scroll;
        }
        .nav-img {
