@@ -573,13 +573,14 @@
            transition: ease-in 0.3s;
        }
        .projects-modal {
-           padding: 10% 0 0 0;
+           padding: 20% 0 0 0;
            display: none;
            width: 100%;
+           overflow: scroll;
        }
        .nav-img {
            width: 45vw;
-           height: 35vh;
+           height: 45vh;
            border-radius: 5%;
            border: 1px solid black;
        }
