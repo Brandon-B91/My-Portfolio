@@ -25,7 +25,7 @@
    
    .wrapper {
        width: 100%;
-       background: url("../img/bg.jpg");
+       background: url("../img/bg.jpg") center center/cover;
        background-color: rgba(0, 0, 0, 0.7);
        background-blend-mode: multiply;
        min-height: 100%;
