@@ -105,7 +105,7 @@
    
    .modalRight li {
        color: white;
-       margin: 50px 0;
+       margin: 20px 0;
        padding: 5px;
        color: black;
        max-height: 25vh;
@@ -666,6 +666,7 @@
        }
        .about-modal p {
            margin: 0 20px;
+           font-size: 1.1em;
        }
        .about-modal li {
            padding: 0;
