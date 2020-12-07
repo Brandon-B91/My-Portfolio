@@ -118,6 +118,30 @@
        margin-top: 20%;
        padding: 5% 0;
    }
+
+   .tech-h3 {
+       color: black;
+   }
+
+   .tech-used-p {
+       margin: 0 auto;
+       width: 70%;
+       text-align: center;
+   }
+
+   .tech-used {
+       margin-bottom: 10%;
+   }
+
+   .tech-used ul{
+       margin: 0;
+       padding: 0;
+       width: 30%;
+   }
+   .tech-used li {
+       margin: 0;
+       padding: 0;
+   }
    
    .skillSet {
        display: none;
