@@ -60,7 +60,7 @@
    
    .modalRight {
        background: white;
-       opacity: 80%;
+       opacity: 90%;
        display: flex;
        flex-direction: column;
        align-items: center;
@@ -109,13 +109,6 @@
        padding: 5px;
        color: black;
        max-height: 25vh;
-   }
-
-   .css-subset {
-       list-style-type: dot;
-       margin: 0;
-       padding: 0;
-       font-size: 1em;
    }
    
    .projectSet {
@@ -404,7 +397,7 @@
    
    .modalBottom {
        background: white;
-       opacity: 80%;
+       opacity: 90%;
        display: flex;
        flex-direction: column;
        align-items: center;
@@ -489,6 +482,26 @@
        color: white;
        width: 70%;
        margin-left: 6%;
+       margin-bottom: 7%;
+   }
+
+   .main-blog {
+       color: white;
+       margin: 0 auto;
+       width: 80%;
+       margin-bottom: 3%;
+   }
+
+   .blog-btn {
+       border: 1px solid white;
+       color: white;
+       text-align: center;
+       padding: 1%;
+       width: 30%;
+       margin: 0 auto;
+       border-radius: 24px;
+       background: rgba(255,255,255, 0.2);
+       backdrop-filter: blur(10px);
    }
    
    .txt-type {
@@ -527,7 +540,7 @@
        .main {
            width: 100%;
            position: fixed;
-           top: 0;
+           top: 10%;
            left: 0;
            display: flex;
            flex-direction: column;
@@ -666,12 +679,13 @@
        }
        .about-modal p {
            margin: 0 20px;
-           font-size: 1.1em;
+           font-size: 1.2em;
        }
        .about-modal li {
            padding: 0;
            width: 90%;
            margin: 25px auto;
+           font-size: 1.2em;
        }
        .move-down {
            transform: translateY(100vh);
