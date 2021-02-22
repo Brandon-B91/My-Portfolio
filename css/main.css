@@ -16,6 +16,12 @@
    ul {
        list-style-type: none;
    }
+
+   .skills-icon {
+       width: 50px;
+       height: 50px;
+       color: black;
+   }
    
    html,
    body {
@@ -584,6 +590,8 @@
            flex-direction: column;
            text-align: center;
            justify-content: center;
+           margin: 0;
+           padding: 0;
        }
        .skillsIcon {
            font-size: 1.5em;
@@ -614,7 +622,7 @@
            align-items: center;
            justify-content: center;
            text-align: center;
-           grid-gap: 20px;
+           grid-gap: 5px;
            position: fixed;
            top: -100vh;
            left: 0;
@@ -645,7 +653,7 @@
            list-style-type: none;
        }
        .skills-modal li {
-           margin: 50px 0;
+           margin: 20px 0;
        }
        .contact-modal {
            display: none;
