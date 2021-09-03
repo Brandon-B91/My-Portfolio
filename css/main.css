@@ -24,7 +24,7 @@ ul {
   flex-direction: column;
   width: 100%;
   justify-content: center;
-  height: 90vh;
+  height: 100vh;
   z-index: 1;
   background: url("../img/bg.jpg") center center/cover;
 }
@@ -34,7 +34,7 @@ ul {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.7);
   z-index: 1;
