@@ -436,3 +436,27 @@ h3 {
     transform: translateY(-15px);
   }
 }
+
+@media screen and (max-width: 500px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    height: 100%;
+    z-index: 1;
+    background: url("../img/bg.jpg");
+    background-size: 100% 100%;
+  }
+  
+  .main::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+  }
+}
