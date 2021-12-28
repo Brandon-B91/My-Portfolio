@@ -98,11 +98,13 @@ h3 {
 .projects {
   background: White;
   color: black;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .projectList {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 0.5em;
   padding: 0 10px 10px 10px;;
 }
@@ -123,7 +125,7 @@ h3 {
 
 .projectList2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 0.5em;
   padding: 0 10px 10px 10px;
 }
@@ -469,6 +471,7 @@ h3 {
        padding: 4px 16px;
        border-radius: 16px;
        background: none;
+       border: 1px solid black;
    }
    
    form button:hover {
