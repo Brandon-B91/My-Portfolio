@@ -24,7 +24,7 @@ ul {
   flex-direction: column;
   width: 100%;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   z-index: 1;
   background: url("../img/bg.jpg");
   background-size: 100% 100%;
@@ -35,18 +35,11 @@ ul {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
-
-/* .overlay {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.6);
-} */
 
 .main h1,
 h3 {
@@ -94,12 +87,11 @@ h3 {
 .arrowDown {
   color: white;
   z-index: 3;
-  text-align: center;
   font-size: 50px;
   position: absolute;
   bottom: 1%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 48%;
+  transform: translateX(-48%);
   animation: bounce 0.7s infinite alternate;
 }
 
@@ -112,7 +104,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 0.5em;
-  padding: 0 10px 10px 10px;
+  padding: 0 10px 10px 10px;;
 }
 
 .projects h2 {
@@ -127,10 +119,6 @@ h3 {
   border-radius: 7px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-}
-
-.projectList img:hover {
-  transform: translateY(-10px);
 }
 
 .projectList2 {
@@ -148,10 +136,6 @@ h3 {
   transition: 0.3s;
 }
 
-.projectList2 img:hover {
-  transform: translateY(-10px);
-}
-
 .projectListH3 {
   min-height: 50px;
   margin-bottom: 10px;
@@ -159,6 +143,76 @@ h3 {
   justify-content: center;
   align-items: center;
   color: black;
+}
+
+.image-wrap {
+  margin: 0 auto;
+  position: relative;
+  width: 225px;
+  display: inline-block;
+}
+
+.image-description {
+  position: absolute;
+  text-align: center;
+  border-radius: 7px;
+  padding-top: 20%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  visibility: none;
+  opacity: 0;
+  transition: opacity .3s, visibility .3s;
+}
+
+.image-ul {
+    position: absolute;
+    text-align: center;
+    padding-top: 40%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    visibility: none;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+}
+
+.image-description-2 {
+  position: absolute;
+  text-align: center;
+  border-radius: 7px;
+  padding-top: 80%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  visibility: none;
+  opacity: 0;
+  transition: opacity .2s, visibility .2s;
+}
+
+.image-wrap:hover .image-description  {
+  visibility: visible;
+  opacity: 1;
+}
+
+.image-wrap:hover .image-ul  {
+  visibility: visible;
+  opacity: 1;
+}
+
+.image-wrap:hover .image-description-2  {
+  visibility: visible;
+  opacity: 1;
 }
 
 .skills {
@@ -438,25 +492,7 @@ h3 {
 }
 
 @media screen and (max-width: 500px) {
-  .main {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    height: 85vh;
-    z-index: 1;
-    background: url("../img/bg.jpg");
-    background-size: 100% 100%;
-  }
+
   
-  .main::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1;
-  }
+ 
 }
