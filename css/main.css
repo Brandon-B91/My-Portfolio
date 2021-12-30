@@ -21,9 +21,6 @@ ul {
 /* main */
 
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 100%;
   min-height: 99vh;
   z-index: 1;
@@ -40,26 +37,14 @@ ul {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
-
-/* .main::after {
-  content: "";
-  position:absolute;
-  top: 0;
-  left: 0;
-  min-height: 99vh;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 1;
-} */
 
 .main h1,
 h3 {
   text-align: center;
   color: white;
   margin: 0;
-  padding: 0;
+  padding-top: 25%;
   z-index: 3;
 }
 
@@ -87,8 +72,8 @@ h3 {
   color: red;
 }
 
-.main p {
-  color: white;
+.overlay p {
+  color: red;
   z-index: 3;
   position: absolute;
   bottom: 10%;
@@ -101,7 +86,7 @@ h3 {
   z-index: 3;
   font-size: 50px;
   position: absolute;
-  bottom: 1%;
+  bottom: 10%;
   left: 49%;
   transform: translateX(-49%);
   animation: bounce 0.7s infinite alternate;
@@ -450,7 +435,7 @@ h3 {
     color: white;
     z-index: 3;
     position: absolute;
-    bottom: 10%;
+    bottom: 20%;
     left: 53%;
     transform: translateX(-52%);
   }
