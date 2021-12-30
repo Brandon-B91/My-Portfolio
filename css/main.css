@@ -404,9 +404,10 @@ h3 {
        height: 50px;
        padding: 4px 16px;
        border-radius: 24px;
-       background: none;
+       /* background: none; */
        border: 1px solid black;
        font-size: 1rem;
+       color: black;
    }
    
    form button:hover {
