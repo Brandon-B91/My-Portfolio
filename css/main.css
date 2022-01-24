@@ -112,6 +112,7 @@ h3 {
 
 .projectList2 {
   padding: 0 10px 10px 10px;
+  margin-bottom: 5%;
   display: grid;
   grid-gap: 3%;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -174,19 +175,16 @@ h3 {
 }
 
 .skills ul {
-    margin-top: 5%;
-    margin-left: 15%;
-    padding-bottom: 5%;
-    columns: 2;
+  margin: 0 auto;
+  columns: 2;
 }
 
 .skills li {
     padding: 5px;
     font-size: 1.5rem;
-    border: 10px solid transparent;
+    border: 1px solid white;
     border-radius: 50%;
     background: white;
-    display: block;
     padding: 5%;
     color: black;
     height: 120px;
