@@ -177,6 +177,7 @@ h3 {
     margin-top: 5%;
     margin-left: 15%;
     padding-bottom: 5%;
+    max-height: 600px;
     columns: 2;
 }
 
