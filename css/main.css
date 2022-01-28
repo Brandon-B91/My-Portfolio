@@ -468,6 +468,10 @@ h3 {
 
 @media screen and (max-width: 500px) {
 
+  * {
+    height: 99vh;
+  }
+
   .main h1 {
     padding-top: 40%;
     font-size: 2.4em;
