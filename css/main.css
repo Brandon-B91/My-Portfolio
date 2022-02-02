@@ -432,7 +432,7 @@ h3 {
  }
 
  .skills li {
-  margin: 1%;
+  margin: 1% 0 1% 0;
   font-size: 1.5rem;
 } 
 
