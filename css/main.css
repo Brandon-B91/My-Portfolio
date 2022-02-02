@@ -261,7 +261,7 @@ h3 {
    .contact-form input:valid+.label-name .content-name {
        transform: translateY(-150%);
        font-size: 12px;
-       color:white;
+       color:gray;
    }
    
    .contact-form input:focus+.label-name::after,
@@ -340,7 +340,7 @@ h3 {
    .email-form input:valid+.email-name .email-field {
        transform: translateY(-150%);
        font-size: 12px;
-       color:white;
+       color:gray;
    }
    
    .email-form input:focus+.email-name::after,
