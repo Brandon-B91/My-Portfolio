@@ -77,7 +77,6 @@ h3 {
 }
 
 .projectList {
-  padding: 0 10px 10px 10px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -86,6 +85,10 @@ h3 {
 
 .projectDiv {
   margin: 5%;
+}
+
+.projectDiv p {
+  max-width: 250px;
 }
 
 .projects h2 {
@@ -103,7 +106,7 @@ h3 {
   height: 400px;
   border-radius: 7px;
   box-shadow: 4px 6px rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  width: 300px;
 }
 
 .projectListH3 {
@@ -133,14 +136,15 @@ h3 {
 .skills li {
   font-size: 1.5rem;
   border: 1px solid white;
-  border-radius: 50%;
+  border-radius: 100%;
   background: white;
   color: black;
-  height: 125px;
-  width: 125px;
+  height: 130px;
+  width: 130px;
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 1);
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 } 
@@ -195,6 +199,7 @@ h3 {
        position: relative;
        overflow-X: hidden;
        background: none;
+       max-width: 600px;
    }
    
    .contact-form input {
@@ -204,6 +209,7 @@ h3 {
        border: none;
        outline: none;
        background: none;
+       
    }
    
    .contact-form label {
@@ -276,6 +282,7 @@ h3 {
        position: relative;
        overflow: hidden;
        background: none;
+       max-width: 600px;
    }
    
    .email-form input {
@@ -354,6 +361,7 @@ h3 {
        height: 50px;
        position: relative;
        background: none;
+       max-width: 600px;
    }
    
    .text-area textarea {
@@ -386,6 +394,7 @@ h3 {
        border: 1px solid black;
        font-size: 1rem;
        color: black;
+       max-width: 600px;
    }
    
    form button:hover {
