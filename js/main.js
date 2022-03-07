@@ -1,5 +1,4 @@
 
-
 function clearContact() {
     let closeName = document.querySelector('.close-name');
     closeName.addEventListener('click', () => {
@@ -82,3 +81,23 @@ function init() {
     // Init TypeWriter
     new TypeWriter(txtElement, words, wait);
 }
+
+
+function showResume() {
+    let modal = document.querySelector('.modal');
+    let resumeBtn = document.querySelector('.resume');
+    resumeBtn.addEventListener('click', () => {
+        modal.style.display = 'block';
+    })
+} 
+showResume()
+
+function closeResume(e) {
+    let modal = document.querySelector('.modal');
+    let x = document.querySelector('.close')
+    modal.addEventListener('click', (e) => {
+        if(e.target == modal || e.target == x) {
+            modal.style.display = 'none'
+        }
+    })
+} closeResume()
