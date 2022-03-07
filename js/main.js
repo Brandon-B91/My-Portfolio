@@ -1,85 +1,81 @@
-
 function clearContact() {
-    let closeName = document.querySelector('.close-name');
-    closeName.addEventListener('click', () => {
-        let innerName = document.querySelector('.name');
-        innerName.value = '';
-    });
+  let closeName = document.querySelector(".close-name");
+  closeName.addEventListener("click", () => {
+    let innerName = document.querySelector(".name");
+    innerName.value = "";
+  });
 
-    let closeEmail = document.querySelector('.close-email');
-    closeEmail.addEventListener('click', () => {
-        let innerEmail = document.querySelector('.email')
-        innerEmail.value = '';
-    });
+  let closeEmail = document.querySelector(".close-email");
+  closeEmail.addEventListener("click", () => {
+    let innerEmail = document.querySelector(".email");
+    innerEmail.value = "";
+  });
 }
 clearContact();
 
 // ES6 Class
 class TypeWriter {
-    constructor(txtElement, words, wait = 8000) {
-        this.txtElement = txtElement;
-        this.words = words;
-        this.txt = '';
-        this.wordIndex = 0;
-        this.wait = parseInt(wait, 12);
-        this.type();
-        this.isDeleting = false;
+  constructor(txtElement, words, wait = 8000) {
+    this.txtElement = txtElement;
+    this.words = words;
+    this.txt = "";
+    this.wordIndex = 0;
+    this.wait = parseInt(wait, 12);
+    this.type();
+    this.isDeleting = false;
+  }
+
+  type() {
+    // Current index of word
+    const current = this.wordIndex % this.words.length;
+    // Get full text of current word
+    const fullTxt = this.words[current];
+
+    // Check if deleting
+    if (this.isDeleting) {
+      // Remove char
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      // Add char
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
     }
 
-    type() {
-        // Current index of word
-        const current = this.wordIndex % this.words.length;
-        // Get full text of current word
-        const fullTxt = this.words[current];
+    // Insert txt into element
+    this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
 
-        // Check if deleting
-        if (this.isDeleting) {
-            // Remove char
-            this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-            // Add char
-            this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
+    // Initial Type Speed
+    let typeSpeed = 200;
 
-        // Insert txt into element
-        this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
-
-        // Initial Type Speed
-        let typeSpeed = 200;
-
-        if (this.isDeleting) {
-            typeSpeed /= 2;
-        }
-
-        // If word is complete
-        if (!this.isDeleting && this.txt === fullTxt) {
-            // Make pause at end
-            typeSpeed = this.wait;
-            // Set delete to true
-            this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-            this.isDeleting = false;
-            // Move to next word
-            this.wordIndex++;
-            // Pause before start typing
-            typeSpeed = 200;
-        }
-
-        setTimeout(() => this.type(), typeSpeed);
+    if (this.isDeleting) {
+      typeSpeed /= 2;
     }
+
+    // If word is complete
+    if (!this.isDeleting && this.txt === fullTxt) {
+      // Make pause at end
+      typeSpeed = this.wait;
+      // Set delete to true
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === "") {
+      this.isDeleting = false;
+      // Move to next word
+      this.wordIndex++;
+      // Pause before start typing
+      typeSpeed = 200;
+    }
+
+    setTimeout(() => this.type(), typeSpeed);
+  }
 }
 
-
 // Init On DOM Load
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener("DOMContentLoaded", init);
 
 // Init App
 function init() {
-    const txtElement = document.querySelector('.txt-type');
-    const words = JSON.parse(txtElement.getAttribute('data-words'));
-    const wait = txtElement.getAttribute('data-wait');
-    // Init TypeWriter
-    new TypeWriter(txtElement, words, wait);
+  const txtElement = document.querySelector(".txt-type");
+  const words = JSON.parse(txtElement.getAttribute("data-words"));
+  const wait = txtElement.getAttribute("data-wait");
+  // Init TypeWriter
+  new TypeWriter(txtElement, words, wait);
 }
-
-
