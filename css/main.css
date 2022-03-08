@@ -26,7 +26,7 @@ body {
 
 .main {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   min-height: 100vh;
 }
 
@@ -147,10 +147,10 @@ h3 {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-} 
+}
 
 .iconImg {
-    height: 20px;
+  height: 20px;
 }
 
 .aboutMe {
@@ -163,20 +163,20 @@ h3 {
   color: white;
 }
 .aboutMe p {
-    color: white;
-    margin: 0 auto;
-    width: 70%;
+  color: white;
+  margin: 0 auto;
+  width: 70%;
 }
 
 .aboutMe ul {
-    text-align: center;
+  text-align: center;
 }
 
 .aboutMe li {
-    display: inline;
-    color: white;
-    padding: 10px;
-    font-size: 30px;
+  display: inline;
+  color: white;
+  padding: 10px;
+  font-size: 30px;
 }
 
 .aboutMe .resume {
@@ -185,8 +185,8 @@ h3 {
   vertical-align: super;
 }
 .aboutMe .resume:hover {
- cursor: pointer;
- background: rgba(255,255,255, 0.3);
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .aboutMe h3 {
@@ -200,7 +200,7 @@ h3 {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0,0,0, 0.6);
+  background: rgba(0, 0, 0, 0.6);
   display: none;
   z-index: 99;
 }
@@ -240,274 +240,264 @@ a .resume {
 }
 
 .contact {
-    padding-bottom: 20px;
-    background: black;
-    color: white;
+  padding-bottom: 20px;
+  background: black;
+  color: white;
 }
 
-.contact, h1, h2 {
-    text-align: center;
-    padding-top: 5%;
+.contact,
+h1,
+h2 {
+  text-align: center;
+  padding-top: 5%;
 }
 
 .contact-form {
-       margin: 5% auto;
-       width: 70%;
-       height: 50px;
-       position: relative;
-       overflow-X: hidden;
-       background: none;
-       max-width: 600px;
-   }
-   
-   .contact-form input {
-       width: 100%;
-       height: 100%;
-       padding-top: 20px;
-       border: none;
-       outline: none;
-       background: none;
-       color: white;
-   }
-   
-   .contact-form label {
-       position: absolute;
-       bottom: 0;
-       left: 0;
-       width: 100%;
-       height: 100%;
-       pointer-events: none;
-       border-bottom: 1px solid white;
-       background: none;
-   }
-   
-   .contact-form label::after {
-       content: "";
-       position: absolute;
-       left: 0;
-       bottom: 0;
-       height: 100%;
-       width: 100%;
-       border-bottom: 1px solid white;
-       transform: translateX(-100%);
-       
-   }
-   
-   .content-name {
-       position: absolute;
-       bottom: 5px;
-       left: 0px;
-       transition: all 0.3s ease;
-   }
-   
-   .close-name {
-       display: inline;
-       position: absolute;
-       bottom: 0;
-       right: 0;
-   }
-   
-   .close-name:hover {
-       cursor: pointer;
-   }
-   
-   .close-name-sm {
-       display: inline;
-       position: absolute;
-       bottom: 0;
-       right: 0;
-   }
-   
-   .close-name-sm:hover {
-       cursor: pointer;
-   }
-   
-   .contact-form input:focus+.label-name .content-name,
-   .contact-form input:valid+.label-name .content-name {
-       transform: translateY(-150%);
-       font-size: 12px;
-       color:gray;
-   }
-   
-   .contact-form input:focus+.label-name::after,
-   .contact-form input:valid+.label-name {
-       transform: translateX(0%);
-   }
-   
-   .email-form {
-       margin: 5% auto;
-       width: 70%;
-       height: 50px;
-       position: relative;
-       overflow: hidden;
-       background: none;
-       max-width: 600px;
-   }
-   
-   .email-form input {
-       width: 100%;
-       height: 100%;
-       padding-top: 20px;
-       border: none;
-       outline: none;
-       background: none;
-       color: white;
-   }
-   
-   .email-form label {
-       position: absolute;
-       bottom: 0;
-       left: 0;
-       width: 100%;
-       height: 100%;
-       pointer-events: none;
-       border-bottom: 1px solid white;
-       background: none;
-   }
-   
-   .email-form label::after {
-       content: "";
-       position: absolute;
-       left: 0;
-       bottom: 0;
-       height: 100%;
-       width: 100%;
-       border-bottom: 1px solid white;
-       transform: translateX(-100%);
-   }
-   
-   .email-field {
-       position: absolute;
-       bottom: 5px;
-       left: 0px;
-       transition: all 0.3s ease;
-   }
-   
-   .close-email {
-       position: absolute;
-       bottom: 0;
-       right: 0;
-   }
-   
-   .close-email:hover {
-       cursor: pointer;
-   }
-   
-   .close-email-sm {
-       position: absolute;
-       bottom: 0;
-       right: 0;
-   }
-   
-   .close-email-sm:hover {
-       cursor: pointer;
-   }
-   
-   .email-form input:focus+.email-name .email-field,
-   .email-form input:valid+.email-name .email-field {
-       transform: translateY(-150%);
-       font-size: 12px;
-       color:gray;
-   }
-   
-   .email-form input:focus+.email-name::after,
-   .email-form input:valid+.email-name {
-       transform: translateX(0%);
-   }
-   
-   .text-area {
-       margin: 5% auto;
-       width: 70%;
-       height: 50px;
-       position: relative;
-       background: none;
-       max-width: 600px;
-   }
-   
-   .text-area textarea {
-       width: 100%;
-       height: 100px;
-       resize: none;
-       background: none;
-       font-size: .8rem;
-       color: white;
-   }
-
-   textarea:focus {
-     outline: white;
-     border: 1px solid white;
-   }
-   
-   .close-text {
-       position: absolute;
-       right: 0;
-       top: 0;
-   }
-   
-   form button {
-     margin-top: 5%;
-       margin-bottom: 0;
-       width: 70%;
-       height: 35px;
-       padding: 4px 16px;
-       border-radius: 24px;
-       background: none;
-       border: 1px solid white;
-       font-size: 1rem;
-       color: white;
-       max-width: 600px;
-   }
-   
-   form button:hover {
-       cursor: pointer;
-   }
-
-   .contact li {
-        display: inline;
-        font-size: 30px;
-   }
+  margin: 5% auto;
+  width: 70%;
+  height: 50px;
+  position: relative;
+  overflow-x: hidden;
+  background: none;
+  max-width: 600px;
 }
-@media screen and (max-width: 500px) {
 
+.contact-form input {
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+}
+
+.contact-form label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid white;
+  background: none;
+}
+
+.contact-form label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border-bottom: 1px solid white;
+  transform: translateX(-100%);
+}
+
+.content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+
+.close-name {
+  display: inline;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.close-name:hover {
+  cursor: pointer;
+}
+
+.close-name-sm {
+  display: inline;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.close-name-sm:hover {
+  cursor: pointer;
+}
+
+.contact-form input:focus + .label-name .content-name,
+.contact-form input:valid + .label-name .content-name {
+  transform: translateY(-150%);
+  font-size: 12px;
+  color: gray;
+}
+
+.contact-form input:focus + .label-name::after,
+.contact-form input:valid + .label-name {
+  transform: translateX(0%);
+}
+
+.email-form {
+  margin: 5% auto;
+  width: 70%;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+  background: none;
+  max-width: 600px;
+}
+
+.email-form input {
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+}
+
+.email-form label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid white;
+  background: none;
+}
+
+.email-form label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border-bottom: 1px solid white;
+  transform: translateX(-100%);
+}
+
+.email-field {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+
+.close-email {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.close-email:hover {
+  cursor: pointer;
+}
+
+.close-email-sm {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.close-email-sm:hover {
+  cursor: pointer;
+}
+
+.email-form input:focus + .email-name .email-field,
+.email-form input:valid + .email-name .email-field {
+  transform: translateY(-150%);
+  font-size: 12px;
+  color: gray;
+}
+
+.email-form input:focus + .email-name::after,
+.email-form input:valid + .email-name {
+  transform: translateX(0%);
+}
+
+.text-area {
+  margin: 5% auto;
+  width: 70%;
+  height: 50px;
+  position: relative;
+  background: none;
+  max-width: 600px;
+}
+
+.text-area textarea {
+  width: 100%;
+  height: 100px;
+  resize: none;
+  background: none;
+  font-size: 0.8rem;
+  color: white;
+}
+
+textarea:focus {
+  outline: white;
+  border: 1px solid white;
+}
+
+.close-text {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+form button {
+  margin-top: 5%;
+  margin-bottom: 0;
+  width: 70%;
+  height: 35px;
+  padding: 4px 16px;
+  border-radius: 24px;
+  background: none;
+  border: 1px solid white;
+  font-size: 1rem;
+  color: white;
+  max-width: 600px;
+}
+
+form button:hover {
+  cursor: pointer;
+}
+
+.contact li {
+  display: inline;
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 500px) {
   .main {
     height: 99vh;
   }
 
   .main h1 {
-    padding-top: 40%;
+    padding-top: 60%;
     font-size: 2.4em;
     margin-left: 6%;
   }
-  
+
   .main h3 {
     font-size: 1.8em;
     margin-left: 6%;
   }
 
-  .main p {
-    color: white;
-    z-index: 3;
-    position: absolute;
-    bottom: 15%;
-    left: 53%;
-    transform: translateX(-52%);
+  .projects {
+    width: 100%;
   }
-  
- .projects {
-  width: 100%;
- }
 
- .project-overlay {
-   font-size: .8rem
- }
+  .project-overlay {
+    font-size: 0.8rem;
+  }
 
- .skills li {
-  margin: 1% 0 1% 0;
-  font-size: 1.5rem;
-} 
+  .skills li {
+    margin: 1% 0 1% 0;
+    font-size: 1.5rem;
+  }
 
-.contact button:hover {
-  background: #f4f4f4;
-}
-
+  form button {
+    margin-top: 10%;
+  }
 }
