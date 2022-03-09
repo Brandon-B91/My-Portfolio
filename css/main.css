@@ -90,28 +90,11 @@ h3 {
   max-width: 250px;
 }
 
-.projects h2 {
-  text-align: center;
-  padding-top: 5%;
-  padding-bottom: 5%;
-}
-
-.projects h3 {
-  margin: 0;
-  padding: 0;
-}
-
 .projectList img {
   height: 400px;
   border-radius: 7px;
   box-shadow: 4px 6px rgba(0, 0, 0, 0.2);
   width: 300px;
-}
-
-.projectListH3 {
-  min-height: 50px;
-  margin-bottom: 10px;
-  color: black;
 }
 
 .skills {
@@ -486,10 +469,6 @@ form button:hover {
 
   .projects {
     width: 100%;
-  }
-
-  .project-overlay {
-    font-size: 0.8rem;
   }
 
   .skills li {
