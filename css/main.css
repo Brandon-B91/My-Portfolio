@@ -415,6 +415,7 @@ h2 {
   background: none;
   font-size: 0.8rem;
   color: white;
+  padding: 1% 1%;
 }
 
 textarea:focus {
