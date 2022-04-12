@@ -71,7 +71,7 @@ h3 {
 }
 
 .projects {
-  background: lightgray;
+  background: #E5E4E4;
   color: black;
 }
 
@@ -124,7 +124,7 @@ h3 {
   height: 130px;
   width: 130px;
   margin: 1% 0;
-  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 1);
+  box-shadow: 0 0 12px white;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
