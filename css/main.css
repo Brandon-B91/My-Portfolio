@@ -18,10 +18,6 @@ ul {
   list-style-type: none;
 }
 
-body {
-  max-width: 1600px;
-}
-
 /* main */
 
 .main {
@@ -33,7 +29,7 @@ body {
 .mainImg {
   height: 100vh;
   width: 100%;
-  filter: brightness(50%);
+  filter: brightness(50%) blur(3px);
   position: absolute;
   display: block;
 }
@@ -67,12 +63,17 @@ h3 {
 }
 
 .txt-type {
-  color: red;
+  color: white;
 }
 
 .projects {
-  background: #E5E4E4;
+  background: #e5e4e4;
   color: black;
+}
+
+.projects h2 {
+  text-align: center;
+  padding-top: 3%;
 }
 
 .projectList {
@@ -104,7 +105,7 @@ h3 {
 
 .skills h2 {
   text-align: center;
-  padding-top: 5%;
+  padding-top: 3%;
 }
 
 .skills ul {
@@ -121,29 +122,29 @@ h3 {
   border-radius: 100%;
   background: white;
   color: black;
-  height: 130px;
-  width: 130px;
-  margin: 1% 0;
+  min-height: 130px;
+  min-width: 130px;
   box-shadow: 0 0 12px white;
   text-align: center;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
 }
 
 .iconImg {
   height: 20px;
+  display: inline;
 }
 
 .aboutMe {
-  background: #333;
+  background: #222;
 }
 
 .aboutMe h2 {
   text-align: center;
-  padding-top: 5%;
   color: white;
+  padding-top: 3%;
 }
 .aboutMe p {
   color: white;
@@ -167,6 +168,7 @@ h3 {
   border: 1px solid white;
   vertical-align: super;
 }
+
 .aboutMe .resume:hover {
   cursor: pointer;
   background: rgba(255, 255, 255, 0.3);
@@ -175,27 +177,6 @@ h3 {
 .aboutMe h3 {
   margin: 5% 0 0 0;
   padding: 0;
-}
-
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  display: none;
-  z-index: 99;
-}
-
-.modalBox {
-  background: white;
-  height: 90%;
-  width: 70%;
-  position: fixed;
-  top: 5%;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 a .resume {
@@ -211,11 +192,6 @@ a .resume {
   cursor: pointer;
 }
 
-.modalBox img {
-  width: 100%;
-  height: 90%;
-}
-
 .download {
   color: black;
   margin-left: 2%;
@@ -226,13 +202,31 @@ a .resume {
   padding-bottom: 20px;
   background: black;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.contact,
-h1,
-h2 {
+.contact form {
+  border: 1px solid white;
+  background: #fafafa;
+  color: black;
+  width: 60%;
+  border-radius: 24px;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 8px white;
+
+}
+
+.contact h1 {
   text-align: center;
-  padding-top: 5%;
+  width: 90%;
+  margin: 3% 0;
 }
 
 .contact-form {
@@ -248,7 +242,7 @@ h2 {
 .contact-form input {
   width: 100%;
   height: 100%;
-  padding-top: 20px;
+  padding-top: 15px;
   border: none;
   outline: none;
   background: none;
@@ -262,7 +256,7 @@ h2 {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid black;
   background: none;
 }
 
@@ -273,7 +267,7 @@ h2 {
   bottom: 0;
   height: 100%;
   width: 100%;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid black;
   transform: translateX(-100%);
 }
 
@@ -319,7 +313,7 @@ h2 {
 }
 
 .email-form {
-  margin: 5% auto;
+  margin: 0 auto 5%;
   width: 70%;
   height: 50px;
   position: relative;
@@ -331,7 +325,7 @@ h2 {
 .email-form input {
   width: 100%;
   height: 100%;
-  padding-top: 20px;
+  padding-top: 10px;
   border: none;
   outline: none;
   background: none;
@@ -345,7 +339,7 @@ h2 {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid black;
   background: none;
 }
 
@@ -400,27 +394,22 @@ h2 {
 }
 
 .text-area {
-  margin: 5% auto;
   width: 70%;
-  height: 50px;
-  position: relative;
   background: none;
   max-width: 600px;
 }
 
 .text-area textarea {
   width: 100%;
-  height: 100px;
-  resize: none;
   background: none;
   font-size: 0.8rem;
-  color: white;
+  color: black;
   padding: 1% 1%;
 }
 
 textarea:focus {
   outline: white;
-  border: 1px solid white;
+  border: 1px solid black;
 }
 
 .close-text {
@@ -430,16 +419,15 @@ textarea:focus {
 }
 
 form button {
-  margin-top: 5%;
-  margin-bottom: 0;
+  margin: 2%;
   width: 70%;
   height: 35px;
   padding: 4px 16px;
   border-radius: 24px;
   background: none;
-  border: 1px solid white;
+  border: 1px solid black;
   font-size: 1rem;
-  color: white;
+  color: black;
   max-width: 600px;
 }
 
@@ -477,7 +465,8 @@ form button:hover {
     font-size: 1.5rem;
   }
 
-  form button {
-    margin-top: 10%;
+  .contact form {
+    width: 80%;
+    height: 80%;
   }
 }
