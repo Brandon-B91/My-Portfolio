@@ -1,17 +1,4 @@
-function clearContact() {
-  let closeName = document.querySelector(".close-name");
-  closeName.addEventListener("click", () => {
-    let innerName = document.querySelector(".name");
-    innerName.value = "";
-  });
 
-  let closeEmail = document.querySelector(".close-email");
-  closeEmail.addEventListener("click", () => {
-    let innerEmail = document.querySelector(".email");
-    innerEmail.value = "";
-  });
-}
-clearContact();
 
 // ES6 Class
 class TypeWriter {
@@ -68,16 +55,4 @@ class TypeWriter {
   }
 }
 
-// Init On DOM Load
-document.addEventListener("DOMContentLoaded", init);
 
-// Init App
-function init() {
-  setTimeout(() => {
-    const txtElement = document.querySelector(".txt-type");
-    const words = JSON.parse(txtElement.getAttribute("data-words"));
-    const wait = txtElement.getAttribute("data-wait");
-    // Init TypeWriter
-    new TypeWriter(txtElement, words, wait);
-  }, 1000);
-}
