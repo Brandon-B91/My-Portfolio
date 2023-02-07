@@ -30,6 +30,9 @@ a:visited {
 button:active {
   transform: translate(-10px);
 }
+body {
+  overflow-x: hidden;
+}
 
 /* main */
 
@@ -39,7 +42,6 @@ button:active {
 }
 
 .header {
-  width: 100%;
   display: flex;
   background: #000000;
   color: var(--main);
@@ -191,6 +193,11 @@ button:active {
   transform: translateY(-5px);
 }
 
+.splide {
+  overflow-x: hidden;
+  width: 99%;
+}
+
 .splide__track {
   margin: 2%;
 }
@@ -227,8 +234,8 @@ button:active {
   text-align: center;
   position: absolute;
   top: 30%;
-  left: 15%;
-  font-size: 100px;
+  left: 20%;
+  font-size: 120px;
   transform: rotate(5deg);
 }
 
@@ -241,7 +248,7 @@ button:active {
   box-shadow: 2px 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(0,0,0, .15);
+  border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .name {
@@ -311,11 +318,9 @@ text {
 }
 
 form button {
-  width: 275px;
+  width: 250px;
   transition: 0.4s all;
   height: 45px;
-  margin-left: 50%;
-  transform: translatex(-50%);
   background: none;
   border-radius: 500px;
   font-size: 16px;
@@ -324,4 +329,62 @@ form button {
 form button:hover {
   cursor: pointer;
   background: gray;
+}
+
+@media only screen and (max-width: 400px) {
+  .header {
+    position: fixed;
+    bottom: top;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100vw;
+  }
+
+  .header-left {
+    width: 20%;
+  }
+
+  .header-right {
+    margin-left: auto;
+    width: 80%;
+  }
+
+  .main-head {
+    display: flex;
+    align-items: center;
+  }
+
+  .main-head h1 {
+    margin-top: 50%;
+  }
+
+  .footer {
+    margin-bottom: 0;
+  }
+
+  .footer form {
+    width: 95%;
+  }
+
+  input,
+  text {
+    padding-left: 12%;
+  }
+
+  .text-info {
+    padding-left: 30%;
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer h3 {
+    left: 1%;
+    font-size: 60px;
+    width: 50%;
+  }
 }
