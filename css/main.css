@@ -10,6 +10,7 @@
   line-height: 1.6;
   font-family: "Roboto", sans-serif;
   font-family: "Rubik", sans-serif;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -386,7 +387,6 @@ form button:hover {
 
   .footer h3 {
     left: 1%;
-    font-size: 60px;
-    width: 50%;
+    font-size: 65px;
   }
 }
