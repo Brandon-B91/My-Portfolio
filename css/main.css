@@ -155,10 +155,9 @@ body {
   width: 350px;
   min-height: 500px;
   display: flex;
-  margin: -5% 0 10% 0;
+  margin: -8% 0 10% 0;
   flex-direction: column;
   border-radius: 8px;
-  box-shadow: 0 3px 8px white;
   font-size: 14px;
   z-index: 2;
 }
@@ -237,9 +236,12 @@ body {
 .footer {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   background: url("../images/neon1.jpg") no-repeat;
   background-size: 100% 100%;
+  min-height: 300px;
 }
 
 .footer h3 {
@@ -249,6 +251,9 @@ body {
 .form {
   margin: 5% auto;
   width: 80%;
+  max-width: 600px;
+  min-height: 300px;
+  max-height: 600px;
   background: rgba(255, 255, 255, 0.38);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8px);
@@ -339,7 +344,7 @@ input:valid ~ label {
 }
 
 #text-area {
-  margin: 5%;
+  margin: 8% 5% 0 5%;
   width: 300px;
   border: none;
   border-bottom: 1px solid black;
@@ -353,6 +358,10 @@ input:valid ~ label {
   background: none;
 }
 
+#text-area::placeholder {
+  color: var(--secondary-light);
+}
+
 .form-bottom {
   display: flex;
   align-items: center;
@@ -360,6 +369,7 @@ input:valid ~ label {
 }
 
 .form button {
+  margin-top: 8%;
   width: 250px;
   background: var(--secondary);
   color: var(--main);
@@ -410,7 +420,7 @@ input:valid ~ label {
 
   .card {
     width: 85%;
-    margin: -10% 0 15% 0;
+    margin: -15% 0 20% 0;
     padding: 0;
   }
 
@@ -451,11 +461,6 @@ input:valid ~ label {
   .input-field {
     width: 80%;
     margin: 5% 0;
-  }
-
-  .text-area {
-    display: flex;
-    align-items: center;
   }
 
   #text-area {
