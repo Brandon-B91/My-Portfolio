@@ -3,6 +3,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Rubik:wght@300;400;500&display=swap");
 @import "@splidejs/splide/css";
 
+html {
+  background: var(--secondary);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -17,6 +21,7 @@
   --main: #fafafa;
   --main-light: rgba(250, 250, 250, 0.5);
   --secondary: #121212;
+  --secondary-light: rgba(18, 18, 18, 0.7);
 }
 
 a {
@@ -31,8 +36,11 @@ a:visited {
 button:active {
   transform: translate(-10px);
 }
+
 body {
   overflow-x: hidden;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 /* main */
@@ -50,9 +58,10 @@ body {
 }
 
 .header-left {
-  width: 50%;
+  width: 70%;
   display: flex;
   align-items: center;
+  animation: slideDown 2s forwards;
 }
 
 .header-left a {
@@ -79,8 +88,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
+  width: 30%;
   padding-right: 3%;
+  animation: slideDown 2s forwards;
 }
 
 .header-right a:hover {
@@ -101,19 +111,23 @@ body {
   z-index: 1;
   width: 100%;
   height: 100%;
+  max-width: 1440px;
   position: absolute;
-  filter: blur(4px) brightness(80%);
+  filter: brightness(80%);
+  animation: blurUp 2s forwards;
 }
 
 .main-head h1 {
   font-size: 50px;
   margin-top: 15%;
   z-index: 2;
+  animation: slideUp 2s forwards;
 }
 
 .main-head h3 {
   font-size: 30px;
   z-index: 2;
+  animation: fadeIn 3s forwards;
 }
 
 .txt-type {
@@ -122,27 +136,31 @@ body {
 }
 
 .main-body {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  align-items: center;
-  justify-content: center;
-  grid-gap: 2rem;
-  background: var(--main);
-  width: 100%;
+  background: url("../images/neon.jpg") center bottom no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .card {
-  color: var(--main);
-  background: var(--secondary);
-  max-width: 350px;
-  height: 500px;
+  color: var(--secondary);
+  background: rgba(255, 255, 255, 0.38);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.1px);
+  -webkit-backdrop-filter: blur(2.1px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  width: 350px;
+  min-height: 500px;
   display: flex;
+  margin: -5% 0 10% 0;
   flex-direction: column;
-  margin: 2% auto;
-  position: relative;
   border-radius: 8px;
-  box-shadow: 3px 3px 12px black;
+  box-shadow: 0 3px 8px white;
   font-size: 14px;
+  z-index: 2;
 }
 
 .card img {
@@ -165,7 +183,6 @@ body {
 .card li {
   display: inline;
   color: var(--secondary);
-  background: var(--main);
   padding: 0 3px;
   font-size: 0.8rem;
   margin-left: 5px;
@@ -182,7 +199,7 @@ body {
 }
 
 .card-bottom a {
-  border: 1px solid var(--main-light);
+  border: 1px solid var(--secondary);
   padding: 4px 20px;
   margin-bottom: 10px;
   transition: 0.3s all;
@@ -190,13 +207,8 @@ body {
 }
 
 .card-bottom a:hover {
-  background: var(--main-light);
+  background: lightgray;
   transform: translateY(-5px);
-}
-
-.splide {
-  overflow-x: hidden;
-  width: 99%;
 }
 
 .splide__track {
@@ -224,115 +236,142 @@ body {
 
 .footer {
   position: relative;
-  background: var(--main);
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 400px;
+  flex-direction: column;
+  background: url("../images/neon1.jpg") no-repeat;
+  background-size: 100% 100%;
 }
 
 .footer h3 {
   text-align: center;
-  position: absolute;
-  top: 30%;
-  left: 20%;
-  font-size: 120px;
-  transform: rotate(5deg);
 }
 
-.footer form {
-  margin: 0 auto;
-  padding-bottom: 5%;
+.form {
+  margin: 5% auto;
   width: 80%;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  box-shadow: 2px 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.38);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 10px;
 }
 
-.name {
-  padding: 20px;
+.form-body {
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.input-field {
+  display: inline-block;
   position: relative;
-}
-
-.label-text {
-  position: absolute;
-  left: 1%;
-  top: 20px;
-  font-size: 18px;
-  font-weight: 200;
-  color: var(--secondary);
-  transition: all 0.5s ease;
-  pointer-events: none;
-}
-
-input[type="text"]:focus ~ .label-text {
-  display: block;
-  color: gray;
-  top: -10px;
-  left: -1%;
-  font-size: 14px;
-  padding-top: 1%;
-  padding-left: 2%;
-}
-
-input[type="email"]:focus ~ .label-text {
-  display: block;
-  color: gray;
-  top: -5px;
-  left: -1%;
-  font-size: 14px;
-  padding-left: 2%;
-  padding-bottom: 2%;
-}
-
-.select {
-  padding: 3% 0 3% 1%;
-  color: var(--secondary);
-}
-
-select {
-  background: var(--main-light);
-  outline: none;
-  border-radius: 500px;
-  border: 1px solid var(--secondary);
-  padding: 1px;
-}
-
-input,
-text {
-  outline: none;
-  border: 0;
-  border-bottom: 1px solid var(--secondary);
-  height: 30px;
-  width: 100%;
-  background: none;
-  color: var(--secondary);
-  font-size: 14px;
-  padding-left: 7%;
-}
-
-.text-info {
-  padding-left: 18%;
-}
-
-form button {
   width: 250px;
-  transition: 0.4s all;
-  height: 45px;
+  height: 35px;
+  line-height: 35px;
+}
+label {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  color: var(--secondary);
+  transition: 0.2s all;
+  cursor: text;
+}
+input[type="text"] {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid var(--secondary);
+  box-shadow: none;
+  color: #111;
+  font-size: 18px;
   background: none;
+}
+
+.clear-name,
+.clear-email {
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.email-field {
+  display: inline-block;
+  position: relative;
+  width: 250px;
+  height: 35px;
+  line-height: 35px;
+}
+
+input[type="email"] {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid var(--secondary);
+  box-shadow: none;
+  color: #111;
+  font-size: 18px;
+  background: none;
+}
+
+input:invalid {
+  outline: 0;
+  color: #fafafa;
+  border-color: var(--secondary);
+}
+
+input:focus,
+input:valid {
+  border-color: var(--secondary-light);
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  background: none;
+  font-size: 14px;
+  top: -24px;
+  color: var(--secondary-light);
+}
+
+#text-area {
+  margin: 5%;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  transform: translateX(30%);
+  background: none;
+}
+
+#text-area:focus {
+  outline: none;
+  background: none;
+}
+
+.form-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form button {
+  width: 250px;
+  background: var(--secondary);
+  color: var(--main);
   border-radius: 500px;
-  font-size: 16px;
+  padding: 1% 8%;
 }
 
-form button:hover {
+.form button:hover {
   cursor: pointer;
-  background: gray;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 600px) {
   .header {
     position: fixed;
     bottom: top;
@@ -362,6 +401,19 @@ form button:hover {
     text-align: center;
   }
 
+  .main-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    width: 85%;
+    margin: -10% 0 15% 0;
+    padding: 0;
+  }
+
   .footer {
     margin-bottom: 0;
   }
@@ -388,5 +440,79 @@ form button:hover {
   .footer h3 {
     left: 1%;
     font-size: 65px;
+  }
+
+  .form-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .email-field,
+  .input-field {
+    width: 80%;
+    margin: 5% 0;
+  }
+
+  .text-area {
+    display: flex;
+    align-items: center;
+  }
+
+  #text-area {
+    width: 80%;
+  }
+
+  .form button {
+    width: 80%;
+    padding: 2% 7%;
+  }
+}
+
+/* KeyFrames */
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes blurUp {
+  from {
+    filter: brightness(100%);
+    transform: scale(1.5);
+    filter: blur(8px);
+  }
+
+  to {
+    filter: brightness(80%);
+    transform: scale(1);
+    filter: blur(00);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }

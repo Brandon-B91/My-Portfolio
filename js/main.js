@@ -67,4 +67,15 @@ function init() {
 }
 
 
+const clearName = document.querySelector('.clear-name').addEventListener('click', () => {
+  const name = document.querySelector("input[type='text']")
+
+  name.value = ''
+})
+
+const clearEmail = document.querySelector('.clear-email').addEventListener('click', () => {
+  const email = document.querySelector("input[type='email']")
+
+  email.value = ''
+})
 
