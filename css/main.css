@@ -272,7 +272,7 @@ body {
 .input-field {
   display: inline-block;
   position: relative;
-  width: 250px;
+  width: 40%;
   height: 35px;
   line-height: 35px;
 }
@@ -307,7 +307,7 @@ input[type="text"] {
 .email-field {
   display: inline-block;
   position: relative;
-  width: 250px;
+  width: 40%;
   height: 35px;
   line-height: 35px;
 }
@@ -349,7 +349,6 @@ input:valid ~ label {
   border: none;
   border-bottom: 1px solid black;
   outline: none;
-  transform: translateX(30%);
   background: none;
 }
 
@@ -463,12 +462,12 @@ input:valid ~ label {
     margin: 5% 0;
   }
 
-  #text-area {
-    width: 80%;
+  input#text-area {
+    margin: 0 auto;
   }
 
   .form button {
-    width: 80%;
+    width: 90%;
     padding: 2% 7%;
   }
 }
