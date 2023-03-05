@@ -221,8 +221,8 @@ body {
 }
 
 .main-about {
-  background: var(--main);
-  color: var(--secondary);
+  background: var(--secondary);
+  color: var(--);
 }
 
 .main-about h4 {
@@ -350,6 +350,7 @@ input:valid ~ label {
   border-bottom: 1px solid black;
   outline: none;
   background: none;
+  display: block;
 }
 
 #text-area:focus {
@@ -374,10 +375,24 @@ input:valid ~ label {
   color: var(--main);
   border-radius: 500px;
   padding: 1% 8%;
+  outline: none;
+  border: none;
+  position: relative;
+  transition: .3s ease-in all;
+}
+
+.form button::before, 
+.form button::after {
+  position: absolute;
+  content: "";
+  z-index: -1;
 }
 
 .form button:hover {
   cursor: pointer;
+  top: -10px;
+  left: -5px;
+  box-shadow: 10px 10px 0px pink, 20px 20px 0px white;
 }
 
 @media only screen and (max-width: 600px) {
@@ -428,7 +443,7 @@ input:valid ~ label {
   }
 
   .footer form {
-    width: 95%;
+    width: 90%;
   }
 
   input,
