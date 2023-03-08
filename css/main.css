@@ -523,6 +523,7 @@ input:not(:placeholder-shown) ~ label {
     position: absolute;
     top: 35px;
     right: 5%;
+    animation: slideDown 2s;
   }
 
   .hamburger span,
@@ -537,6 +538,7 @@ input:not(:placeholder-shown) ~ label {
     right: 3%;
     display: inline-block;
     content: "";
+    
   }
   .hamburger span:before {
     top: -10px;
