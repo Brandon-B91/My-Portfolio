@@ -79,3 +79,13 @@ const clearEmail = document.querySelector('.clear-email').addEventListener('clic
   email.value = ''
 })
 
+const hamburger = document.querySelector('.hamburger')
+const header = document.querySelector('.header-right')
+const headerLinks = document.querySelector('.header-links')
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active')
+  header.classList.toggle('active')
+  headerLinks.classList.toggle('active')
+})
+
