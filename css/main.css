@@ -94,7 +94,6 @@ body {
 
 .header-right {
   display: flex;
-  align-items: center;
   width: 40%;
   padding-right: 3%;
 }
@@ -103,10 +102,12 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header-right a {
   opacity: 0;
+  position: relative;
 }
 
 .header-right a:hover {
